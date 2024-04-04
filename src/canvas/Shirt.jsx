@@ -58,7 +58,7 @@ const Shirt = () => {
 
   ////////////////////////////////////////////////////////////////
   useFrame((state, delta) =>
-    easing.dampC(materials.lambert1.color, snap.color, 0.25, delta)
+    easing.dampC(material.color, snap.color, 0.25, delta)
   );
 
   ///////////// faberic texture
@@ -88,6 +88,15 @@ const Shirt = () => {
     transparent: false,
   });
   const material_2 = new MeshStandardMaterial({
+    map: baseColorMap,
+    aoMap: ambientOcclusionMap,
+    normalMap: normalMap,
+    roughnessMap: roughnessMap,
+    roughness: 0.4,
+
+    transparent: false,
+  });
+  const material_3 = new MeshStandardMaterial({
     map: denim,
 
     transparent: false,
@@ -101,7 +110,7 @@ const Shirt = () => {
       <pointLight position={[0, 0, 0]} intensity={0.3} />
       <directionalLight
         position={[0, 0, -1]}
-        intensity={5.0}
+        intensity={1.5}
         color="white"
         castShadow
       />
@@ -110,11 +119,10 @@ const Shirt = () => {
         <mesh
           castShadow
           geometry={nodes.T_Shirt_male.geometry}
-          material={materials.lambert1}
+          material={material}
           material-roughness={0.4}
           material-opacity={1}
           material-transparent={false}
-          material-alphaTest={1}
           dispose={null}
         >
           {snap.isFullTexture && (
@@ -123,7 +131,7 @@ const Shirt = () => {
               rotation={[0, 0, 0]}
               scale={0.7}
               map={fullTexture}
-              material={material}
+              material={material_2}
               depthTest={true}
               depthWrite={true}
               material-opacity={1}
