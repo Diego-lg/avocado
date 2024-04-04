@@ -70,12 +70,12 @@ const Shirt = () => {
     roughnessMap,
     denim,
   ] = useTexture([
-    "dist/assets/fabric_texture/fabric_167_ambientocclusion-4K.png",
-    "dist/assets/fabric_texture/fabric_167_basecolor-4K.png",
-    "dist/assets/fabric_texture/fabric_167_height-4K.png",
-    "dist/assets/fabric_texture/fabric_167_normal-4K.png",
-    "dist/assets/fabric_texture/fabric_167_roughness-4K.png",
-    "dist/assets/fabric_texture/denimfabric.jpg",
+    "public/fabric_texture/fabric_167_ambientocclusion-4K.png",
+    "public/fabric_texture/fabric_167_basecolor-4K.png",
+    "public/fabric_texture/fabric_167_height-4K.png",
+    "public/fabric_texture/fabric_167_normal-4K.png",
+    "public/fabric_texture/fabric_167_roughness-4K.png",
+    "public/fabric_texture/denimfabric.jpg",
   ]);
   const stateString = JSON.stringify(snap);
   const material = new MeshStandardMaterial({

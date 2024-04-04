@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <AnimatePresence>
-      <Analytics />
+      <Analytics key="analytics" />
       {snap.intro && (
         <motion.section className="home flex flex-col items-center justify-center">
           <motion.header className="mb-4" {...slideAnimation("down")}>
