@@ -60,7 +60,7 @@ const Customizer = () => {
           />
         );
       case "rembg":
-        return <rembg file={file} setFile={setFile} readFile={readFile} />;
+        return <Rembg file={file} setFile={setFile} readFile={readFile} />;
       default:
         return null;
     }
@@ -81,6 +81,7 @@ const Customizer = () => {
         body: JSON.stringify({ payload }),
       });
       const blob = await response.blob();
+
       handleDecals(type, URL.createObjectURL(blob));
 
       //call our backend to generate an ai image!
@@ -122,6 +123,7 @@ const Customizer = () => {
       setActiveEditorTab("");
     }
   };
+
   //////////////////////////////////////////////
   const handleDecals = (type, result) => {
     const decalType = DecalTypes[type];
@@ -136,6 +138,7 @@ const Customizer = () => {
     switch (tabName) {
       case "logoShirt":
         state.isLogoTexture = !activeFilterTab[tabName];
+
         break;
       case "stylishShirt":
         state.isFullTexture = !activeFilterTab[tabName];

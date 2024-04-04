@@ -21,7 +21,7 @@ export const EditorTabs = [
     icon: ai,
   },
   {
-    name: "rembgIco",
+    name: "rembg",
     icon: rembgIco,
   },
 ];
