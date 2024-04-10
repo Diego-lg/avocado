@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { AnimatePresence, motion } from "framer-motion";
 import { useSnapshot } from "valtio";
 import config from "../config/config";
@@ -9,6 +10,7 @@ import { EditorTabs, FilterTabs, DecalTypes } from "../config/constants";
 import { TransformControls } from "three/examples/jsm/controls/TransformControls";
 
 import { fadeAnimation, slideAnimation } from "../config/motion";
+import Printful from "../components/Printful";
 
 import {
   AIPicker,
@@ -176,7 +178,8 @@ const Customizer = () => {
             {...slideAnimation("left")}
           >
             {/* GENERADOR DE TABS VISUAL*/}
-            <div className="grid grid-cols- grid-rows-2 gap-4  h-screen w-full bg-white shadow  items-center max-h-screen">
+            {/* <div className="grid grid-cols- grid-rows-2 gap-4  h-screen w-full bg-white shadow  items-center max-h-screen"> */}
+            <div className="pt-12 pe-20 grid grid-cols- grid-rows-2 gap-4  h-screen w-full shadow  items-center max-h-screen">
               <div className="editortabs-container tabs">
                 {EditorTabs.map((tab) => (
                   <Tab
@@ -213,6 +216,8 @@ const Customizer = () => {
               handleClick={() => (state.intro = true)}
               customStyles="w-fit px-4 py-2.5 font-bold text-sm"
             />
+
+            <Printful />
           </motion.div>
         </>
       )}

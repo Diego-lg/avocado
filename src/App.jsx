@@ -2,14 +2,15 @@ import Canvas from "./canvas";
 import Customizer from "./pages/Customizer";
 import Home from "./pages/Home";
 import Navbar from "./pages/navBar";
-
+import LoginSignUp from "./pages/LoginSignUp";
 function App() {
   return (
     <main className="app transition-all ease-in">
       <Navbar />
-      <Home />
+      <LoginSignUp />
+      {/* <Home />
       <Canvas />
-      <Customizer />
+      <Customizer /> */}
     </main>
   );
 }
