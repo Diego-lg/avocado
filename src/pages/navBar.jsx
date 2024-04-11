@@ -16,13 +16,14 @@ function Navbar() {
           </span>
         </a>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-          <Login /> {/* Include the Login component here */}
-          {/* <button
-            type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-          >
-            Get started
-          </button> */}
+          <a href="/loginSignUp">
+            <button
+              type="button"
+              className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+              Account
+            </button>
+          </a>
           <button
             data-collapse-toggle="navbar-cta"
             type="button"
@@ -55,7 +56,7 @@ function Navbar() {
           <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-x-4 md:space-y-0 font-medium text-sm md:text-base">
             <li>
               <a
-                href="#"
+                href="/Home"
                 className="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
                 aria-current="page"
               >

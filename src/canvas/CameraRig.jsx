@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { easing } from "maath";
 import { useSnapshot } from "valtio";
+import { OrbitControls } from "@react-three/drei";
 
 import state from "../store";
 let timer = 0;
@@ -40,7 +41,12 @@ const CameraRig = ({ children }) => {
   });
   // set the model rotation smoothly
 
-  return <group ref={group}>{children}</group>;
+  return (
+    <group ref={group}>
+      {children}
+      <OrbitControls enableRotate={false} enablePan={false} />
+    </group>
+  );
 };
 
 export default CameraRig;
