@@ -11,10 +11,10 @@ function App() {
     <main className="app transition-all ease-in">
       <Router>
         <div>
-          <Navbar />
+          {/* <Navbar /> */}
           <Routes>
             <Route
-              path="/Home"
+              path="/"
               element={
                 <>
                   <Home />

@@ -1,20 +1,11 @@
 import { Canvas } from "@react-three/fiber";
-import {
-  Environment,
-  Center,
-  Sparkles,
-  Shadow,
-  ContactShadows,
-  Billboard,
-  Cloud,
-} from "@react-three/drei";
+import { Environment, Center, Sparkles, Billboard } from "@react-three/drei";
 
 //
-import * as THREE from "three";
 
 import { LayerMaterial, Depth } from "lamina";
 //
-import { createRoot } from "react-dom/client";
+
 import { Suspense } from "react";
 
 //
@@ -59,13 +50,13 @@ const CanvasModel = () => {
         <Glow scale={1 * 1.2} near={-25} />
         <Sparkles
           color={"white"}
-          count={60}
+          count={10}
           scale={1 * 2}
           size={3}
-          speed={0.1}
+          speed={0.5}
         />
-        <Sparkles count={60} scale={1 * 2} size={3} speed={0.1} />
-        <Sparkles count={60} scale={1 * 2} size={3} speed={0.1} />
+        <Sparkles count={10} scale={1 * 2} size={3} speed={0.1} />
+        <Sparkles count={10} scale={1 * 2} size={3} speed={0.1} />
         <CameraRig>
           <Backdrop />
           <Center>

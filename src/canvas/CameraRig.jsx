@@ -43,8 +43,13 @@ const CameraRig = ({ children }) => {
 
   return (
     <group ref={group}>
-      {children}
-      <OrbitControls enableRotate={false} enablePan={false} />
+      {children}{" "}
+      <OrbitControls
+        enableRotate={false}
+        enablePan={false}
+        minDistance={1}
+        maxDistance={3}
+      />
     </group>
   );
 };

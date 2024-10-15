@@ -20,31 +20,10 @@ const Home = () => {
       <Analytics key="analytics" />
       {snap.intro && (
         <motion.section className="home flex flex-col items-center justify-center">
-          {/* <motion.header className="mb-4" {...slideAnimation("down")}>
-            <img
-              src="./00002.png"
-              alt="logo"
-              className="logo w-12 h-12 object-contain transform scale-150"
-            />
-          </motion.header> */}
-
           <motion.header
             className="flex justify-end pr-6 absolute top-8 right-0 gap-2 "
             {...slideAnimation("down")}
-          >
-            {/* <CustomButton
-              type="filled"
-              title="Store"
-              handleClick={() => (state.intro = true)}
-              customStyles="font-bold text-sm"
-            />
-            <CustomButton
-              type="filled"
-              title="Contact Us"
-              handleClick={() => (state.intro = true)}
-              customStyles="font-bold text-sm"
-            /> */}
-          </motion.header>
+          ></motion.header>
           <motion.div
             className="home-content text-center"
             {...headContainerAnimation}

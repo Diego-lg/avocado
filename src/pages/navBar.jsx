@@ -1,9 +1,8 @@
 import React from "react";
-import Login from "../components/Login"; // Import the Login component
 
 function Navbar() {
   return (
-    <nav className="bg-black border-gray-200 z-10">
+    <nav className="custom-border shadow-md border-gray-200 z-10">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
           <img
@@ -56,7 +55,7 @@ function Navbar() {
           <ul className="flex flex-col md:flex-row items-center space-y-4 md:space-x-4 md:space-y-0 font-medium text-sm md:text-base">
             <li>
               <a
-                href="/Home"
+                href="/"
                 className="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500"
                 aria-current="page"
               >

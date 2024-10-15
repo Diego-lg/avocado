@@ -39,7 +39,7 @@ const Customizer = () => {
   const [generatingRembg, setGeneratingRembg] = useState(false);
   const [activeEditorTab, setActiveEditorTab] = useState("");
   const [activeFilterTab, setActiveFilterTab] = useState({
-    logoShirt: true,
+    logoShirt: false,
     stylishShirt: false,
   });
 
@@ -100,7 +100,7 @@ const Customizer = () => {
     if (!prompt) return alert("Please enter a photo");
 
     try {
-      setRembgImg(true);
+      setGeneratingRembg(true);
       const response = await fetch(proxyUrl_rembg, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -121,7 +121,7 @@ const Customizer = () => {
     } catch (error) {
       alert(error);
     } finally {
-      setRembgImg(false);
+      setGeneratingRembg(false);
       setActiveEditorTab("");
     }
   };
