@@ -4,10 +4,8 @@ import { useSnapshot } from "valtio";
 import { useFrame } from "@react-three/fiber";
 import { Decal, useGLTF, useTexture, OrbitControls } from "@react-three/drei";
 import state from "../store";
-import { MeshStandardMaterial } from "three";
-//
+import { MeshStandardMaterial, Vector3 } from "three";
 
-//
 const Shirt = () => {
   const snap = useSnapshot(state);
   const { nodes } = useGLTF("/shirt_baked.glb");
@@ -88,7 +86,7 @@ const Shirt = () => {
         >
           {snap.isFullTexture && (
             <Decal
-              position={[0, 0, 0]}
+              position={new Vector3(...(snap.fullTexturePosition || [0, 0, 0]))}
               rotation={[0, 0, 0]}
               scale={0.7}
               map={fullTexture}
@@ -103,7 +101,7 @@ const Shirt = () => {
           )}
           {snap.isLogoTexture && (
             <Decal
-              position={[0, 0.04, 0.15]}
+              position={new Vector3(...(snap.logoPosition || [0, 0.04, 0.15]))}
               rotation={[0, 0, 0]}
               scale={[0.25, 0.15, 0.15]}
               map={logoTexture}
@@ -115,7 +113,6 @@ const Shirt = () => {
       </group>
     </Suspense>
   );
-  r;
 };
 
 export default Shirt;

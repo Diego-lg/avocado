@@ -5,6 +5,7 @@ import Navbar from "./pages/navBar";
 import LoginSignUp from "./pages/LoginSignUp";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Link } from "react-router-dom";
+import DecalControls from "./canvas/DecalControls";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
                 <>
                   <Home />
                   <Canvas />
+
                   <Customizer />
                 </>
               }

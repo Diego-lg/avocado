@@ -12,6 +12,8 @@ import { TransformControls } from "three/examples/jsm/controls/TransformControls
 import { fadeAnimation, slideAnimation } from "../config/motion";
 import Printful from "../components/Printful";
 
+import DecalControls from "../canvas/DecalControls";
+
 import {
   AIPicker,
   ColorPicker,
@@ -189,7 +191,8 @@ const Customizer = () => {
                   />
                 ))}
                 {generateTabContent()}
-              </div>
+              </div>{" "}
+              <DecalControls />
               <motion.div
                 className="filtertabs-container"
                 {...slideAnimation("up")}
@@ -210,12 +213,12 @@ const Customizer = () => {
             className="absolute z-10 bottom-10 right-5"
             {...fadeAnimation}
           >
-            <CustomButton
+            {/* <CustomButton
               type="filled"
               title="Go Back"
               handleClick={() => (state.intro = true)}
               customStyles="w-fit px-4 py-2.5 font-bold text-sm"
-            />
+            /> */}
 
             <Printful />
           </motion.div>
